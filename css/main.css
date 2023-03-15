@@ -23,11 +23,13 @@ a {
 
 .global-nav {
     height: 44px;
+    padding: 0 1rem;
 }
 
 .local-nav {
     height: 52px;
     border-bottom: 1px solid #ddd;
+    padding: 0 1rem;
 }
 
 .global-nav-links,
@@ -56,4 +58,42 @@ a {
 .local-nav-links a:not(.product-name) {
     margin-left: 2em;
     font-size: 0.8rem;
+}
+
+.scroll-section {
+    padding-top: 50vh; /*화면의 절반만큼 padding 주기*/
+}
+
+#scroll-section-0 h1 {
+    font-size: 4rem;
+    text-align: center; /*텍스트 정렬*/
+}
+
+.main-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    height: 3em;
+    font-size: 2.5rem;
+}
+
+.main-message p {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.description {
+    padding: 0 1rem; /*메뉴의 rem 간격과 똑같이 맞춤*/
+    font-size: 1.2rem;
+    color:#888;
+}
+
+/*여기서는 주로 font-size는 rem 단위, 나머지는 em 단위를 사용하고 있음 -> 단위 더 공부하기*/
+.description strong {
+    float: left; /*왼쪽으로 정렬하여 바로 오른쪽에 글자가 바로 보이도록 설정*/
+    margin-right: 0.2em;
+    font-size: 3rem;
+    color: rgb(29,29,31);
 }
