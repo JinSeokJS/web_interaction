@@ -84,7 +84,19 @@ a {
     line-height: 1.2;
 }
 
+.main-message small {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1.2rem;
+}
+
+#scroll-section-2 .main-message {
+    font-size: 3.5rem; /*css 적용 순서에 따라 이 부분이 우선 적용되고, 그 후 위 small 적용*/
+}
+
 .description {
+    max-width: 1000px; /*최대 폭 제한*/
+    margin: 0 auto;
     padding: 0 1rem; /*메뉴의 rem 간격과 똑같이 맞춤*/
     font-size: 1.2rem;
     color:#888;
@@ -96,4 +108,82 @@ a {
     margin-right: 0.2em;
     font-size: 3rem;
     color: rgb(29,29,31);
+}
+
+.desc-message {
+    width: 50%;
+    font-weight: bold;
+}
+
+.pin {
+    /*세로로 긴 선 만들기*/
+    width: 1px;
+    height: 100px;
+    background: rgb(29,29,31);
+}
+
+.mid-message {
+    max-width: 1000px; /*최대 폭 제한*/
+    margin: 0 auto;
+    padding: 0 1rem; /*기존 좌우 간격과 똑같이 설정*/
+    font-size: 2rem;
+    color: #888;
+}
+
+.mid-message strong {
+    color: rgb(29,29,31);
+}
+
+.canvas-caption {
+    max-width: 1000px; /*최대 폭 제한*/
+    margin: 0 auto;
+    padding: 0 1rem;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    background-color: #34b696;
+}
+
+@media (min-width: 1024px) {
+    #scroll-section-0 h1 {
+        font-size: 9vw; /*화면 크기에 비례하여 글자 사이즈도 달라짐*/
+    }
+
+    .main-message {
+        font-size: 4vw;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
+
+    .description strong {
+        font-size: 6rem;
+    }
+
+    #scroll-section-2 .main-message {
+        font-size: 6vw;
+    }
+
+    .main-message small {
+        font-size: 1.5vw;
+    }
+
+    .desc-message {
+        width:20%;
+    }
+    
+    .mid-message {
+        font-size: 3vw;
+    }
+
+    .canvas-caption {
+        font-size: 2rem;
+    }
 }
