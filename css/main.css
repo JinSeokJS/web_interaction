@@ -16,16 +16,44 @@ p {
     line-height: 1.6;
 }
 
+a {
+    color: rgb(29,29,31);
+    text-decoration: none;
+}
+
 .global-nav {
     height: 44px;
 }
 
-.global-nav-links {
+.local-nav {
+    height: 52px;
+    border-bottom: 1px solid #ddd;
+}
+
+.global-nav-links,
+.local-nav-links {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: 1000px; /*브라우저 사이즈가 클 때 최대가 1000이고, 줄어들면 같이 줄어들게 해야하므로 max-width 사용*/
     margin: 0 auto; /*좌우 margin은 auto를 사용하여 가운데 정렬*/
     height: 100%; /*height 44는 부모 요소이고, 여기는 텍스트만큼만의 높이라 수직 가운데 정렬이 안되므로, 부모와 같은 높이로 지정*/
 }
 
+.global-nav-links {
+    justify-content: space-between;
+}
+
+.product-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    /*로고처럼 하나만 떨어지게 하고 싶으면 margin: auto가 가장 쉬움*/
+    /*auto는 가질 수 있는 간격을 모두 사용하기 때문에 잘 활용하면 정렬하기 편함*/
+    margin-right: auto;
+    
+}
+
+/*not을 사용하면 괄호 안 조건을 만족하는 요소는 제외하고 적용*/
+.local-nav-links a:not(.product-name) {
+    margin-left: 2em;
+    font-size: 0.8rem;
+}
