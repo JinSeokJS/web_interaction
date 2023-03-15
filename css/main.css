@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    overflow-x: hidden; /*좌우 스크롤 방지*/
+    color: rgb(29,29,31);
+    letter-spacing: -0.05em;
+    background-color: white;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.global-nav {
+    height: 44px;
+}
+
+.global-nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px; /*브라우저 사이즈가 클 때 최대가 1000이고, 줄어들면 같이 줄어들게 해야하므로 max-width 사용*/
+    margin: 0 auto; /*좌우 margin은 auto를 사용하여 가운데 정렬*/
+    height: 100%; /*height 44는 부모 요소이고, 여기는 텍스트만큼만의 높이라 수직 가운데 정렬이 안되므로, 부모와 같은 높이로 지정*/
+}
+
